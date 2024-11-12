@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MixiK3/-/static/css/main.77d2fcb8.css",
-    "main.js": "/MixiK3/-/static/js/main.5eb16455.js",
+    "main.js": "/MixiK3/-/static/js/main.b91b4c02.js",
     "static/media/logo.svg": "/MixiK3/-/static/media/logo.403d5960053044be875fba9d48bc5ab1.svg",
     "static/media/1st.svg": "/MixiK3/-/static/media/1st.91752a6741fb015f41830e55460b0b99.svg",
     "static/media/3st.svg": "/MixiK3/-/static/media/3st.57f0f6ce60c373c22a11003dd643da2d.svg",
@@ -21,10 +21,10 @@
     "static/media/humburger.svg": "/MixiK3/-/static/media/humburger.6e3cdbc19f9f951a9021c894f0d75f31.svg",
     "static/media/ic_dashboard.svg": "/MixiK3/-/static/media/ic_dashboard.b98624263bb85811cb608d4a2184db87.svg",
     "main.77d2fcb8.css.map": "/MixiK3/-/static/css/main.77d2fcb8.css.map",
-    "main.5eb16455.js.map": "/MixiK3/-/static/js/main.5eb16455.js.map"
+    "main.b91b4c02.js.map": "/MixiK3/-/static/js/main.b91b4c02.js.map"
   },
   "entrypoints": [
     "static/css/main.77d2fcb8.css",
-    "static/js/main.5eb16455.js"
+    "static/js/main.b91b4c02.js"
   ]
 }
