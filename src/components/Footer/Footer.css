@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+}
+.footer-h3 {
+  font-size: 1rem; /* 16px, если шрифт корня по умолчанию */
+  margin: 0 0 15px 15px;
+}
+
+.footer-want {
+  font-size: 0.875rem; /* Это примерно 14px */
+  color: #898989;
+  margin: 0 0 15px 15px;
+}
+
+.footer-together {
+  font-size: 0.9375rem; /* Это примерно 15px */
+  color: #933581;
+  margin: 0 0 15px 15px;
+}
+
+.copyright {
+  font-size: 0.75rem; /* Это примерно 12px */
+  color: #928989;
+  margin: 0 0 15px 15px;
+}
