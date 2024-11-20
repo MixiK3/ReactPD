@@ -2,6 +2,7 @@ import notification from "../../assets/svgs/forTemplate/notification.svg";
 import help from "../../assets/svgs/forTemplate/help.svg";
 import account from "../../assets/svgs/forTemplate/account.svg";
 import React from "react";
+import { Link } from 'react-router-dom';
 import logo from "../../assets/svgs/forTemplate/logo.svg";
 import "./Header.css";
 import humburger from "../../assets/svgs/forTemplate/humburger.svg";
@@ -25,19 +26,19 @@ function Header({ toggleNav }) {
         <div className="header-right-block">
           <ul className="right-block">
             <li>
-              <a href="#home">
+              <Link to="#home">
                 <img src={help} alt="Помощь" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#home">
+              <Link to="#home">
                 <img src={notification} alt="Уведомления" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#home">
+              <Link to="#home">
                 <img src={account} alt="Аккаунт" />
-              </a>
+              </Link>
               <div className="account-information">
                 <p className="account-information-1">user</p>
                 <p className="account-information-2">Admin</p>
@@ -51,3 +52,7 @@ function Header({ toggleNav }) {
 }
 
 export default Header;
+
+
+
+

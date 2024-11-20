@@ -14,18 +14,28 @@ button.inactive {
   background-color: lightgray;
   color: black;
 }
-.buttonChoice {
+
+.backButton {
   background-color: rgb(119, 93, 166);
 }
+.backBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.blockRating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.buttonRatting {
+  background-color: #775da6;
+}
+
 @media (max-width: 950px) {
-  .topTable {
+  .blockRating {
     display: block;
   }
-  button.active {
-    margin: 15px 7.5px;
-  }
-
-  button.inactive {
+  .buttonRatting {
     margin: 15px 7.5px;
   }
 }

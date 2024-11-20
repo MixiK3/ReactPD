@@ -2,31 +2,24 @@ import React, { useState } from "react";
 import { useBonus } from "../../context/BonusesContext/BonusContext"; // Import the custom hook
 import ConfirmationModal from "../../components/Modals/ConfirmationModal";
 import SuccessModal from "../../components/Modals/SuccessModal";
+import styles from './YourBonuses.module.css';
 
 function YourBonuses() {
   const { userBonuses, setUserBonuses, history, setHistory } = useBonus(); // Access context
 
   const [selectedBonus, setSelectedBonus] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
   const bonusOptions = [
-    {
-      cost: 30,
-      description: "Отмена домашней работы за один предмет на один день",
-    },
-    {
-      cost: 40,
-      description: "Подсказка от учителя на контрольной/самостоятельной",
-    },
+    { cost: 30, description: "Отмена домашней работы за один предмет на один день" },
+    { cost: 40, description: "Подсказка от учителя на контрольной/самостоятельной" },
     { cost: 50, description: "Поменять вариант на контрольной" },
     { cost: 60, description: "+1 бал за контрольеную" },
     { cost: 125, description: "Бесплатная пицца в столовой (единоразово)" },
     { cost: 100, description: "Отмена выхода к доске" },
-    {
-      cost: 300,
-      description: "Повышение оценки в четверти на 1 бал за один предмет",
-    },
+    { cost: 300, description: "Повышение оценки в четверти на 1 бал за один предмет" },
   ];
 
   const handleConfirmSpendBonuses = () => {
@@ -38,11 +31,12 @@ function YourBonuses() {
           amount: selectedBonus.cost,
           description: selectedBonus.description,
           date: new Date().toLocaleString(),
-          code:
-            bonusOptions.findIndex((b) => b.cost === selectedBonus.cost) + 1,
+          code: bonusOptions.findIndex((b) => b.cost === selectedBonus.cost) + 1,
         },
       ]);
+      // Reset the selected states
       setSelectedBonus(null);
+      setSelectedIndex(null);
       setShowSuccess(true); // Show success modal
     }
   };
@@ -64,8 +58,11 @@ function YourBonuses() {
                 {bonusOptions.map((bonus, index) => (
                   <tr
                     key={index}
-                    className={index % 2 === 0 ? "light-row" : "dark-row"}
-                    onClick={() => setSelectedBonus(bonus)}
+                    className={`${index % 2 === 0 ? styles.lightRow : styles.darkRow} ${selectedIndex === index ? styles.selected : ''}`} // Add selected class conditionally
+                    onClick={() => {
+                      setSelectedBonus(bonus);
+                      setSelectedIndex(index);
+                    }}
                     style={{ cursor: "pointer" }}
                   >
                     <td>{bonus.cost}</td>

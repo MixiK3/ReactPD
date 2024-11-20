@@ -1,8 +1,8 @@
-import React from "react";
-import Header from "./Header/Header";
-import Aside from "./Aside/Aside";
-import Footer from "./Footer/Footer";
-import { Outlet } from "react-router-dom"; // Используется для вложенных маршрутов
+import React from 'react'
+import Header from './Header/Header'
+import Aside from './Aside/Aside'
+import Footer from './Footer/Footer'
+import { Outlet } from 'react-router-dom' // Используется для вложенных маршрутов
 
 const MainLayout = ({ toggleNav, isNavOpen }) => {
   return (
@@ -14,7 +14,7 @@ const MainLayout = ({ toggleNav, isNavOpen }) => {
       </main>
       <Footer className="footer" />
     </div>
-  );
-};
+  )
+}
 
-export default MainLayout;
+export default MainLayout

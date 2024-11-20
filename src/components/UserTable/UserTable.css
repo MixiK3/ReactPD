@@ -22,7 +22,6 @@ th {
 .light-row {
   background-color: #f9f9f9; /* Светло-серый цвет для нечетных строк */
 }
-
 .dark-row {
   background-color: white; /* Белый цвет для четных строк */
 }

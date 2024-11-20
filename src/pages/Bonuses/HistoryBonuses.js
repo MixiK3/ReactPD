@@ -3,7 +3,6 @@ import { useBonus } from "../../context/BonusesContext/BonusContext";
 
 function HistoryBonuses() {
   const { history } = useBonus(); // Access context
-
   return (
     <div>
       <div className="container">
@@ -16,21 +15,24 @@ function HistoryBonuses() {
                   <th>Код</th>
                   <th>Потраченные бонусы</th>
                   <th>Когда</th>
-                  <th>Код потраченного бонуса (1-7)</th>
+                  <th>Название потраченного бонуса</th>
                 </tr>
               </thead>
               <tbody>
-                {history.map((item, index) => (
-                  <tr
-                    key={index}
-                    className={index % 2 === 0 ? "light-row" : "dark-row"}
-                  >
-                    <td>{index + 1}</td>
-                    <td>{item.amount}</td>
-                    <td>{item.date}</td>
-                    <td>{item.code}</td>
+                {history.length === 0 ? (
+                  <tr>
+                    <td colSpan="4">Нет доступной истории.</td>
                   </tr>
-                ))}
+                ) : (
+                  history.map((item, index) => (
+                    <tr key={index} className={index % 2 === 0 ? "light-row" : "dark-row"}>
+                      <td>{index + 1}</td>
+                      <td>{item.amount}</td>
+                      <td>{item.date}</td>
+                      <td>{item.description}</td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>

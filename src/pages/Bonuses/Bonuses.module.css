@@ -30,3 +30,12 @@ button.inactive {
   background-color: lightgray;
   color: black;
 }
+
+@media (max-width: 950px) {
+  .articlesButtons {
+    display: block;
+  }
+  .buttons {
+    margin-top: 15px;
+  }
+}

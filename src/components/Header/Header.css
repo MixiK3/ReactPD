@@ -8,7 +8,9 @@
 h1 {
   font-size: 21px;
 }
-
+.highlighted {
+  background-color: yellow; /* Цвет подсветки */
+}
 ul,
 li {
   list-style: none;
@@ -41,7 +43,7 @@ li {
 }
 
 .search input {
-  background-image: url("../../assets/svgs/forTemplate/search.svg"); /* Убедитесь, что путь корректен */
+  background-image: url('../../assets/svgs/forTemplate/search.svg'); /* Убедитесь, что путь корректен */
   background-position: 5px center;
   background-repeat: no-repeat;
   padding-left: 25px;
@@ -50,6 +52,7 @@ li {
   width: 300px;
   height: 4vh;
   border-radius: 8px;
+  margin-left: 30px;
 }
 
 .account-information {
