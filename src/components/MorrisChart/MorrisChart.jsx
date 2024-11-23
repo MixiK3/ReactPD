@@ -1,7 +1,7 @@
 // src/components/MorrisChart.js
 import React from "react";
 import { Line, Bar, Doughnut } from "react-chartjs-2";
-import "./MorrisChart.css";
+import styles from "./MorrisChart.module.css";
 import {
   Chart as ChartJS,
   LineElement,
@@ -70,9 +70,7 @@ const MorrisChart = () => {
   };
 
   return (
-    <div className="morrisChart">
-      {" "}
-      {/* Указываем фиксированные размеры для контейнера графика */}
+    <div className={styles.morrisChart}>
       <Bar data={data} options={options} />
     </div>
   );

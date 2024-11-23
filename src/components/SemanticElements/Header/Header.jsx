@@ -1,11 +1,11 @@
-import notification from "../../assets/svgs/forTemplate/notification.svg";
-import help from "../../assets/svgs/forTemplate/help.svg";
-import account from "../../assets/svgs/forTemplate/account.svg";
+import notification from "../../../assets/svgs/forTemplate/notification.svg";
+import help from "../../../assets/svgs/forTemplate/help.svg";
+import account from "../../../assets/svgs/forTemplate/account.svg";
 import React from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/svgs/forTemplate/logo.svg";
+import logo from "../../../assets/svgs/forTemplate/logo.svg";
 import "./Header.css";
-import humburger from "../../assets/svgs/forTemplate/humburger.svg";
+import humburger from "../../../assets/svgs/forTemplate/humburger.svg";
 
 function Header({ toggleNav }) {
   return (

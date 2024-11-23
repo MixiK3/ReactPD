@@ -1,18 +1,18 @@
-import "./Pagination.css";
+import styles from "./Pagination.module.css";
 
 const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
 
   return (
     <nav>
-      <ul className="pagination">
+      <ul className={styles.pagination}>
         {pages.map((page) => (
           <li
             key={page}
-            className={`page-item ${currentPage === page ? "active" : ""}`}
+            className={`${styles.pageItem} ${currentPage === page ? `${styles.active}` : ""}`}
             onClick={() => onPageChange(page)}
           >
-            <span className="page-link">{page}</span>
+            <span className={styles.pageLink}>{page}</span>
           </li>
         ))}
       </ul>

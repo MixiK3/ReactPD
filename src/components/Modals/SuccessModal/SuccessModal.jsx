@@ -1,15 +1,15 @@
 import React from "react";
-import "./Modal.css"; // You can style it here
+import styles from './SuccessModal.module.css' // You can style it here
 
 const SuccessModal = ({ onClose }) => {
   return (
-    <div className="modal-overlay">
-      <div className="modal">
-        <h2 style={{ fontSize: "24px", fontWeight: "regular" }}>
+    <div className={styles.modalOverlay}>
+      <div className={styles.modal}>
+        <h2 className={styles.description}>
           Ура! Вы потратили бонусы!
         </h2>
         <button
-          style={{ backgroundColor: "#775da6", marginTop: "20px" }}
+          className={styles.modalButtons}
           onClick={onClose}
         >
           Закрыть

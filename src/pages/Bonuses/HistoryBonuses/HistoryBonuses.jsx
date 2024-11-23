@@ -1,8 +1,8 @@
-import React from "react";
-import { useBonus } from "../../context/BonusesContext/BonusContext";
+import React from 'react'
+import { useBonus } from '../../../context/BonusesContext/BonusContext'
 
 function HistoryBonuses() {
-  const { history } = useBonus(); // Access context
+  const { history } = useBonus() // Access context
   return (
     <div>
       <div className="container">
@@ -25,7 +25,10 @@ function HistoryBonuses() {
                   </tr>
                 ) : (
                   history.map((item, index) => (
-                    <tr key={index} className={index % 2 === 0 ? "light-row" : "dark-row"}>
+                    <tr
+                      key={index}
+                      className={index % 2 === 0 ? 'light-row' : 'dark-row'}
+                    >
                       <td>{index + 1}</td>
                       <td>{item.amount}</td>
                       <td>{item.date}</td>
@@ -39,7 +42,7 @@ function HistoryBonuses() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default HistoryBonuses;
+export default HistoryBonuses

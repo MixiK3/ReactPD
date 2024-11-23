@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from "../Pagination/Pagination"; // Импортируем компонент пагинации
-import "./UserTable.css"; // Импортируем стили
+import "./GlobalUserTable.css"; // Импортируем стили
 
 const USERS_PER_PAGE = 5; // Количество пользователей на странице
 
