@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.09c450db.css",
-    "main.js": "/static/js/main.5559d1e4.js",
+    "main.css": "/static/css/main.ff025e3f.css",
+    "main.js": "/static/js/main.49ff1e64.js",
+    "static/js/885.e5d949d2.chunk.js": "/static/js/885.e5d949d2.chunk.js",
     "static/media/logo.svg": "/static/media/logo.403d5960053044be875fba9d48bc5ab1.svg",
     "static/media/1st.svg": "/static/media/1st.91752a6741fb015f41830e55460b0b99.svg",
     "static/media/3st.svg": "/static/media/3st.57f0f6ce60c373c22a11003dd643da2d.svg",
     "static/media/2nd.svg": "/static/media/2nd.bde7c668b70480cf0fda9eb9e438f12b.svg",
     "static/media/rating.svg": "/static/media/rating.bdeea3aa646b4cfa88bad2c68233ac3a.svg",
     "static/media/Bonuses.svg": "/static/media/Bonuses.9f302e230305f56e64cc138e24455978.svg",
+    "static/media/soundClick.mp3": "/static/media/soundClick.4722bdc51d055dde7cbb.mp3",
+    "static/media/soundClickForButtons.mp3": "/static/media/soundClickForButtons.c8bb50ba0f236680e2b9.mp3",
+    "static/media/soundClickForPages.mp3": "/static/media/soundClickForPages.e2cb06a9e8799d3f68cb.mp3",
     "static/media/station.svg": "/static/media/station.57c4d6c4613a61e9e217f60d66ed4257.svg",
     "static/media/shield.svg": "/static/media/shield.508f137040650d874f1be4f12a387850.svg",
     "static/media/phone.svg": "/static/media/phone.161dbdc1c56acd17ddaac33c31f010be.svg",
@@ -20,11 +24,12 @@
     "static/media/account.svg": "/static/media/account.e1a8145d88683c58f27cbbf6be6fcbb8.svg",
     "static/media/humburger.svg": "/static/media/humburger.6e3cdbc19f9f951a9021c894f0d75f31.svg",
     "static/media/ic_dashboard.svg": "/static/media/ic_dashboard.b98624263bb85811cb608d4a2184db87.svg",
-    "main.09c450db.css.map": "/static/css/main.09c450db.css.map",
-    "main.5559d1e4.js.map": "/static/js/main.5559d1e4.js.map"
+    "main.ff025e3f.css.map": "/static/css/main.ff025e3f.css.map",
+    "main.49ff1e64.js.map": "/static/js/main.49ff1e64.js.map",
+    "885.e5d949d2.chunk.js.map": "/static/js/885.e5d949d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09c450db.css",
-    "static/js/main.5559d1e4.js"
+    "static/css/main.ff025e3f.css",
+    "static/js/main.49ff1e64.js"
   ]
 }

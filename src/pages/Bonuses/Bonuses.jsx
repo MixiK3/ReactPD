@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import useSound from 'use-sound'
+import soundClickForButtons from '../../assets/mp3/soundClickForButtons.mp3'
 import styles from './Bonuses.module.css'
 import YourBonuses from './YourBonuses/YourBonuses'
 import HistoryBonuses from './HistoryBonuses/HistoryBonuses'
 
 function Bonuses() {
+  const [click] = useSound(soundClickForButtons)
   // State to manage which section is visible
   const [showBonuses, setShowBonuses] = useState(true)
 
@@ -28,13 +31,19 @@ function Bonuses() {
           <div className={styles.buttons}>
             <button
               className={showBonuses ? styles.active : styles.inactive}
-              onClick={handleBonusesClick}
+              onClick={() => {
+                handleBonusesClick()
+                click()
+              }}
             >
               Ваши бонусы
             </button>
             <button
               className={!showBonuses ? styles.active : styles.inactive}
-              onClick={handleHistoryClick}
+              onClick={() => {
+                handleHistoryClick()
+                click()
+              }}
             >
               История
             </button>

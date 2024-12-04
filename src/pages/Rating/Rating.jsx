@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import useSound from 'use-sound'
+import soundClickForButtons from '../../assets/mp3/soundClickForButtons.mp3'
 import { Outlet, useNavigate } from 'react-router-dom'
 import RatingForSchool from './RatingForSchool/RatingForSchool'
 import styles from './Rating.module.css'
 
 function Rating() {
+  const [click] = useSound(soundClickForButtons)
   const [showRating, setShowRating] = useState(true)
   const navigate = useNavigate()
 
@@ -26,13 +29,19 @@ function Rating() {
           <div>
             <button
               className={showRating ? styles.active : styles.inactive}
-              onClick={handleClickOnSchool}
+              onClick={() => {
+                click()
+                handleClickOnSchool()
+              }}
             >
               По школе
             </button>
             <button
               className={!showRating ? styles.active : styles.inactive}
-              onClick={handleClickOnClass}
+              onClick={() => {
+                click()
+                handleClickOnClass()
+              }}
             >
               По классам
             </button>

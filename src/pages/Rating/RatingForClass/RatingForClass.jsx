@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import useSound from 'use-sound'
+import soundClickForButtons from '../../../assets/mp3/soundClickForButtons.mp3'
 import { useNavigate, useParams } from 'react-router-dom'
 import TableForClasses from './TableForClasses'
 import styles from './RatingForClass.module.css'
@@ -7,6 +9,7 @@ import Pagination from '../../../components/Pagination/Pagination'
 const USERS_PER_PAGE = 10 // Установлено 10 пользователей на странице
 
 const RatingForClass = () => {
+  const [click] = useSound(soundClickForButtons)
   const { classId } = useParams() // Получаем ID класса
   const navigate = useNavigate() // Используем navigate для перехода
   const [dataTable, setDataTable] = useState([]) // Данные таблицы
@@ -56,7 +59,10 @@ const RatingForClass = () => {
         <h2>Рейтинг для класса {classId}</h2>
         <button
           className={styles.buttonRatting}
-          onClick={() => navigate('/rating/classes')}
+          onClick={() => {
+            navigate('/rating/classes')
+            click()
+          }}
         >
           Вернуться к выбору класса
         </button>

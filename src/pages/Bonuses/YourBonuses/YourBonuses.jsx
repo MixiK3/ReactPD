@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
+import useSound from 'use-sound'
+import soundClickForButtons from '../../../assets/mp3/soundClickForButtons.mp3'
 import { useBonus } from '../../../context/BonusesContext/BonusContext' // Import the custom hook
 import ConfirmationModal from '../../../components/Modals/ConfirmationModal/ConfirmationModal'
 import SuccessModal from '../../../components/Modals/SuccessModal/SuccessModal'
 import styles from './YourBonuses.module.css'
 
 function YourBonuses() {
-  const { userBonuses, setUserBonuses, history, setHistory } = useBonus() // Access context
-
+  const [click] = useSound(soundClickForButtons)
+  const { userBonuses, setUserBonuses, history, setHistory } = useBonus()
   const [selectedBonus, setSelectedBonus] = useState(null)
   const [selectedIndex, setSelectedIndex] = useState(null)
   const [showConfirmation, setShowConfirmation] = useState(false)
@@ -87,7 +89,10 @@ function YourBonuses() {
                 color: 'white',
                 marginTop: '20px',
               }}
-              onClick={() => setShowConfirmation(true)}
+              onClick={() => {
+                setShowConfirmation(true)
+                click()
+              }}
               disabled={!selectedBonus} // Disable button if no bonus is selected
             >
               Потратить бонусы
